@@ -22,8 +22,8 @@ public class HomeController {
         return "Welcome to Smart Manager";
 
     }
-
+    @GetMapping("/welcome")
     public String Welcome(){
-
+     return "Home";
     }
 }
