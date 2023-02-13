@@ -12,18 +12,18 @@ public class HomeController {
     @Autowired
     UserRepo userRepo;
 
-    @GetMapping("/Home")
-    @ResponseBody
+//    @GetMapping("/Home")
+//    @ResponseBody
+//    public String Home(){
+//        User user=new User();
+//        user.setId(123);
+//        user.setName("Shashi");
+//        userRepo.save(user);
+//        return "Welcome to Smart Manager";
+//
+//    }
+    @GetMapping("/home")
     public String Home(){
-        User user=new User();
-        user.setId(123);
-        user.setName("Shashi");
-        userRepo.save(user);
-        return "Welcome to Smart Manager";
-
-    }
-    @GetMapping("/welcome")
-    public String Welcome(){
      return "Home";
     }
 }
