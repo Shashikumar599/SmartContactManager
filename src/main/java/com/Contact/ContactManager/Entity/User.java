@@ -86,4 +86,19 @@ public class User {
     public void setIsenabled(boolean isenabled) {
         this.isenabled = isenabled;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                ", image='" + image + '\'' +
+                ", isenabled=" + isenabled +
+                ", about='" + about + '\'' +
+                ", contactList=" + contactList +
+                '}';
+    }
 }
