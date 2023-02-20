@@ -1,8 +1,10 @@
 package com.Contact.ContactManager.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.boot.autoconfigure.web.WebProperties;
-
+//import javax.validation.constraints;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +13,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    @NotBlank(message = "Name field required")
+    @Size(min=2 ,max = 20 ,message = "min 2 and max 20 characters are allowed")
     private String name;
     private String email;
     private String password;
